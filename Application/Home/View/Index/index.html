@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html class="full_height" lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta content="{$keywords}" name="keywords" />
+    <meta content="{$description}" name="description" />
+    <!-- 禁止移动端添加样式和系统自带的检测功能 -->
+    <meta content="telephone=no,email=no,adress=no" name="format-detection">
+    <title>
+        {$title}
+    </title>
+    <!-- IE6-10 -->
+    <link href="__PUBLIC__/favicon.png" rel="shortcut icon" />
+    <!-- Everybody else -->
+    <link href="__PUBLIC__/favicon.png" rel="icon" />
+    <!-- Bootstrap -->
+    <link href="__PUBLIC__/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- 响应式导航 -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/responsive-nav/responsive-nav.css">
+    <script src="__PUBLIC__/jquery-1.9.1.min.js"></script>
+    <script src="__PUBLIC__/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/responsive-nav/responsive-nav.js"></script>
+    <script type="text/javascript" src="//cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <style>
+    html,
+    body {
+        overflow-x: hidden;
+        font-size:14px;
+    }
+    @media screen and (min-width: 1440px) {
+        body{
+            font-size:28px;
+        }
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        visibility: hidden;
+        clear: both;
+    }
+    
+    .absolute-center {
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    
+    .logo img:hover {
+        cursor: pointer;
+    }
+    /*字体*/
+    
+    .english_01 {
+        font-family: arial, serif;
+        font-weight: 400;
+    }
+    
+    .hidden {
+        display: none;
+        width: 0;
+    }
+    /*主页子模块*/
+    
+    .section {
+        text-align: center;
+        font: 50px arial "Microsoft Yahei";
+        color: #fff;
+    }
+    /*商标区域*/
+    
+    .banner {
+        position: absolute;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+    }
+    
+    .banner > .logo {
+        position: absolute;
+    }
+    
+    @media screen and (max-width: 320px) {
+        .banner > .logo {
+            left: 0;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo img {
+            width: 50%;
+            height: auto;
+        }
+    }
+    /*顶部菜单*/
+    
+    .menu {
+        list-style: none;
+    }
+    
+    .menu li {
+        float: right;
+        color: #fff;
+        margin-right: 2em;
+    }
+    
+    .menu li:hover {
+        cursor: pointer;
+    }
+    
+    .menu .unit {
+        width: 100%;
+    }
+    /*子标题*/
+    
+    .sub_title {
+        padding: 50px 0;
+        width: 100%;
+        font-size: 4rem;
+        text-align: center;
+        color: #000;
+    }
+    /*页面底部栏*/
+    
+    footer {
+        background: #1880D6;
+        color: #fff;
+    }
+    
+    footer label {
+        font-weight: normal;
+        color: #fff!important;
+    }
+    
+    footer .menu {
+        width: 100%;
+        height: 200px;
+        line-height: 200px;
+        margin: 0;
+        padding: 0;
+        /*background: rgba(0, 0, 0, .1);*/
+        list-style: none;
+    }
+    
+    footer .menu li {
+        height: 200px;
+        line-height: 200px;
+        float: left;
+    }
+    /*锚点*/
+    
+    .anchor_shooter {
+        color: #fff;
+    }
+    
+    .anchor_shooter:hover {
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    #share_container {
+        position: fixed;
+        z-index: 10000;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 100%;
+    }
+    .qq{
+        position:fixed;
+        z-index: 1000;
+        right:0;
+        bottom:20px;
+    }
+    </style>
+</head>
+
+</html>
+
+<body>
+    <!-- debug:{$context.APP_DEBUG} -->
+    <!-- {$context.ip} -->
+    <!--MOB SHARE BEGIN-->
+    <div id="share_container" style="display: none">
+        <!-- <div class="-mob-share-ui-button -mob-share-open">分享</div> -->
+        <div class="-mob-share-ui">
+            <ul class="-mob-share-list">
+                <li class="-mob-share-weibo">
+                    <p>新浪微博</p>
+                </li>
+                <li class="-mob-share-weixin">
+                    <p>微信</p>
+                </li>
+                <li class="-mob-share-douban">
+                    <p>豆瓣</p>
+                </li>
+                <li class="-mob-share-tencentweibo">
+                    <p>腾讯微博</p>
+                </li>
+                <li class="-mob-share-qzone">
+                    <p>QQ空间</p>
+                </li>
+                <li class="-mob-share-qq">
+                    <p>QQ好友</p>
+                </li>
+                <li class="-mob-share-youdao">
+                    <p>有道云笔记</p>
+                </li>
+                <li class="-mob-share-linkedin">
+                    <p>LinkedIn</p>
+                </li>
+                <li class="-mob-share-facebook">
+                    <p>Facebook</p>
+                </li>
+                <li class="-mob-share-twitter">
+                    <p>Twitter</p>
+                </li>
+            </ul>
+            <div class="-mob-share-close">取消</div>
+        </div>
+        <div class="-mob-share-ui-bg"></div>
+        <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=1586a2263ca54"></script>
+    </div>
+    <!--MOB SHARE END-->
+    <header class="banner">
+        <a href="{$context.base}" class="logo"><img src="__PUBLIC__/img/meterial1/kudon_logo_white.png"></a>
+        <nav class="nav-collapse">
+            <ul>
+                <li><a class="anchor_shooter" href="#section_introduction">CCIE</a></li>
+                <li><a class="anchor_shooter" href="#section_advantage">Advantage</a></li>
+                <li><a class="anchor_shooter" href="#section_case">Success</a></li>
+                <li><a class="anchor_shooter" href="#anchor_footer">Contact</a></li>
+            </ul>
+        </nav>
+        <script>
+        var navigation = responsiveNav(".nav-collapse", {
+            // animate: true, // Boolean: Use CSS3 transitions, true or false
+            // transition: 284, // Integer: Speed of the transition, in milliseconds
+            // label: "Menu", // String: Label for the navigation toggle
+            // insert: "after", // String: Insert the toggle before or after the navigation
+            // customToggle: "", // Selector: Specify the ID of a custom toggle
+            // closeOnNavClick: false, // Boolean: Close the navigation when one of the links are clicked
+            // openPos: "relative", // String: Position of the opened nav, relative or static
+            // navClass: "nav-collapse", // String: Default CSS class. If changed, you need to edit the CSS too!
+            // navActiveClass: "js-nav-active", // String: Class that is added to <html> element when nav is active
+            // jsClass: "js", // String: 'JS enabled' class which is added to <html> element
+            init: function() {}, // Function: Init callback
+            open: function() {
+                $(".nav-collapse").css("background", "rgba(0,0,0,.5)");
+            }, // Function: Open callback
+            close: function() {
+                    $(".nav-collapse").css("background", "inherit");
+                } // Function: Close callback
+        });
+        </script>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- overview -->
+                <div class="row">
+                    <div class="section" id="section_overview">
+                        <include file="Index/overview" />
+                    </div>
+                </div>
+                <!-- Introduction -->
+                <div class="row">
+                    <div class="col-md-1">&nbsp;</div>
+                    <div class="col-md-10">
+                        <div classs="section" id="section_introduction">
+                            <include file="Index/introduction" />
+                        </div>
+                    </div>
+                    <div class="col-md-1">&nbsp;</div>
+                </div>
+                <hr>
+                <!-- Advantage -->
+                <div class="row" style="margin-top:400px;">
+                    <div class="col-md-1">&nbsp;</div>
+                    <div class="col-md-10">
+                        <div calss="section" id="section_advantage">
+                            <include file="Index/advantage" />
+                        </div>
+                    </div>
+                    <div class="col-md-1">&nbsp;</div>
+                </div>
+                <hr>
+                <!-- Successful Case -->
+                <div class="row">
+                    <div class="col-md-1">&nbsp;</div>
+                    <div class="col-md-10">
+                        <div class="section" id="section_case">
+                            <include file="Index/case" />
+                        </div>
+                    </div>
+                    <div class="col-md-1">&nbsp;</div>
+                </div>
+                <hr>
+                <!-- Cooperation -->
+                <div class="row">
+                    <div class="col-md-1">&nbsp;</div>
+                    <div class="col-md-10">
+                        <div class="section" id="section_cooperation">
+                            <include file="Index/cooperation" />
+                        </div>
+                    </div>
+                    <div class="col-md-1">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer id="anchor_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <style type="text/css">
+                    .qr-code {
+                        margin-top: 10px;
+                        text-align: right;
+                    }
+                    
+                    .qr-code img {
+                        display: block;
+                        margin-right: 0;
+                        margin-left: auto;
+                        width: 100px;
+                    }
+                    .bottom-contact{
+                        text-align: right;
+                        margin:10px 0!important;
+                    }
+                    @media screen and (max-width: 480px) {
+                        .qr-code {
+                            float: left;
+                            margin-top: 10px;
+                            margin-left:10%;
+                            text-align: center;
+                        }
+                        .qr-code img {
+                            display: block;
+                            margin:0 auto;
+                            width: 100px;
+                        }
+                        .bottom-contact{
+                            text-align: center;
+                        }
+                    }
+                    </style>
+                    <div class="col-md-offset-8 col-md-2 qr-code" style="">
+                        <img src="__PUBLIC__/qrcode.png" class="" style="">
+                        <label for="">咨询微信号</label>
+                    </div>
+                    <div class="col-md-2 qr-code" style="">
+                        <img src="__PUBLIC__/bookaccount.jpg" style="">
+                        <label for="">订阅号</label>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-field bottom-contact" style="">
+                        <input class="cp_input_phone" type="text" name="" placeholder="请输入您的手机号码">
+                        <button class="cp_btn_contact" style="background:#0000FF;">联系我们</button>
+                    </div>
+                </div>
+                <div class="col-md-12 chinese_01">
+                    <label>咨询电话：<a class="color-white" href="tel:15605179590">15605179590</a> ／ <a class="color-white" href="tel:17310305262">17310305262</a></label>
+                </div>
+                <!-- <div class="col-xs-12 chinese_01">
+                    <label>咨询QQ：
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=396698979&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:396698979:41" alt="点击这里给我发消息" title="点击这里给我发消息" />3036978521</a>
+                    </label>
+                </div> -->
+                <div class="col-md-12 chinese_01">
+                    <address style="margin:0;">地址：南京市高新开发区新科二路南京软件园创业服务中心</address>
+                </div>
+                <div class="col-md-12">
+                    <hr>
+                </div>
+                <div class="col-md-12">
+                    <a href="{:U('Home:Index/phoneEntrance')}">
+                        <img class="logo" src="__PUBLIC__/img/meterial1/kudon_logo_white.png" style="float:left;margin-left:-8px;height:3em;width:auto;">
+                    </a>
+                    <p class="copyright chinese_01" style="float:right;">
+                        苏ICP备16045755
+                    </p>
+                    <br>
+                    <p class="copyright english_01" style="float:right;">
+                        Copyright©2016 All Rights Reserved Kudon
+                    </p>
+                    <br>
+                    <br>
+                    <!-- <br>
+                    <p class="copyright" style="float:right;">
+                        版权所有 隐私权政策
+                    </p> -->
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+    $youziku.load(".chinese_01", "cb217b1a114445f296cf52ce88fc209d", "Source-Han-Light");
+    $youziku.draw();
+    </script>
+    <a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3036978521&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:3036978521:53" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".logo img").hover(function() {
+        $(this).attr('src', '__PUBLIC__/img/meterial1/kudon_logo_color.png');
+    }, function() {
+        $(this).attr('src', '__PUBLIC__/img/meterial1/kudon_logo_white.png');
+    });
+});
+$(window).resize(function(event) {
+    var screenHeight = window.innerHeight;
+    // $("div[id^=section_overview]").height(screenHeight * 4 / 5);
+    $("div[id^=section_introduction]").height(screenHeight);
+    $("footer").css('margin-top', screenHeight / 4);
+    // $("footer").height(screenHeight / 2);
+});
+</script>

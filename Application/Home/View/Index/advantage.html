@@ -1,0 +1,487 @@
+<style type="text/css">
+.advantage {
+    text-align: left;
+    line-height: 1.5;
+}
+
+.advantage h3 {
+    margin: 5px 0;
+}
+
+.advantage img {
+    width: 20%;
+    height: auto;
+}
+
+.advantage_block {
+    height: 250px;
+}
+
+.advantage_block img {
+    margin-bottom: 2em;
+}
+
+.advantage_block h3 {
+    line-height: 2;
+}
+
+.advantage_block span {
+    line-height: 1.5;
+}
+
+.advantage_block:hover {
+    cursor: pointer;
+}
+
+.modal {
+    padding: 0!important;
+}
+
+.modal-dialog {
+    margin: 0;
+    width: 100%!important;
+    height: 100%!important;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.modal-body img {
+    width: 100%;
+    height: auto;
+}
+
+
+/*优势点边框*/
+
+#advantage_teacher,
+#advantage_rate,
+#advantage_question,
+#advantage_machine,
+#advantage_course,
+#advantage_environment {
+    border: 0;
+}
+
+#advantage_teacher,
+#advantage_rate,
+#advantage_question {
+    border-bottom: 1px solid #eee;
+}
+
+#advantage_rate,
+#advantage_course {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+
+/* 中等屏幕（桌面显示器，小于等于 992px） */
+
+@media (max-width: 992px) {
+    #advantage_teacher,
+    #advantage_rate,
+    #advantage_question,
+    #advantage_machine,
+    #advantage_course,
+    #advantage_environment {
+        border: 0;
+    }
+    #advantage_teacher,
+    #advantage_course,
+    #advantage_question {
+        border-right: 1px solid #eee;
+    }
+    #advantage_teacher,
+    #advantage_rate,
+    #advantage_question,
+    #advantage_machine {
+        border-bottom: 1px solid #eee;
+    }
+}
+
+
+/* 小屏幕（平板，小于等于 768px） */
+
+@media (max-width: 768px) {
+    #advantage_teacher,
+    #advantage_rate,
+    #advantage_question,
+    #advantage_machine,
+    #advantage_course,
+    #advantage_environment {
+        border: 0;
+    }
+    #advantage_teacher,
+    #advantage_rate,
+    #advantage_question,
+    #advantage_machine,
+    #advantage_course {
+        border-bottom: 1px solid #eee;
+    }
+}
+
+#btn_close {
+    position: absolute;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+}
+
+#btn_close:hover {
+    cursor: pointer;
+}
+
+.glyphicon-remove-sign {
+    /*background: rgba(0, 0, 0, .2);*/
+    color: #000;
+    font-size: 2em;
+    text-decoration: blink!important;
+}
+
+.color-white {
+    color: #fff;
+}
+
+
+/*题库详情*/
+
+.tiku_detail_wrapper {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    background: #000;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+}
+
+.tiku_detail_wrapper .content_wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tiku_detail_wrapper .btn_close_tiku_detail {
+    position: absolute;
+    right: -14px;
+    top: -14px;
+    width: 28px;
+    height: 28px;
+}
+
+
+/*题库详情触发按钮组*/
+
+ul.btn_group_tiku_detail {
+    position: absolute;
+    top: 34%;
+    margin: 0 12% 0 8%;
+    padding: 0;
+    width: 80%;
+    height: 38%;
+}
+
+ul.btn_group_tiku_detail li {
+    display: inline-block;
+    float: left;
+    width: 33.333333%;
+    height: 100%;
+    text-align: center;
+}
+
+ul.btn_group_tiku_detail li a {
+    display: inline-block;
+    margin: 0 20%;
+    width: 60%;
+    height: 100%;
+}
+
+
+/*课程安排*/
+
+.kecheng_bg {
+    /*min-height: 600px;*/
+}
+
+.dropdown_toggle {
+    padding-left: 1em;
+}
+
+.dropdown_group {
+    position: absolute;
+    top: 40%;
+    margin: 0 6% 0 24%;
+    width: 70%;
+}
+
+.dropdown_group .wrapper {
+    float: left;
+    width: 33.333333%;
+}
+
+.dropdown_kecheng,
+.sub_dropdown_kecheng {
+    padding-left: 2em;
+}
+
+.packup,
+.packup li {
+    /*display:none;*/
+}
+</style>
+<assign name="advantage_prefix" value="__PUBLIC__/img/advantage" />
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="display:none;">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">优势详情</h4>
+            </div>
+            <a id="btn_close"><span class="glyphicon glyphicon-remove-sign"> </a>
+            <script type="text/javascript">
+            $("#btn_close").click(function(event) {
+                /* Act on the event */
+                $(".modal-header .close").click();
+            });
+            </script>
+            <div class="modal-body">
+            </div>
+            <!-- <div class="modal-footer"> -->
+            <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            <!-- </div> -->
+        </div>
+    </div>
+</div>
+<!-- Button trigger modal -->
+<button id="modal-trigger" type="button" class="hidden" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+</button>
+<h1 class="sub_title english_01">
+    Advantage
+</h1>
+<div class="container-fluid">
+    <div class="row advantage">
+        <div id="advantage_teacher" class="col-md-4 col-sm-6 col-xs-12 advantage_block" style="left:0;">
+            <img src="__PUBLIC__/img/advantage/01.png">
+            <h3>强大导师阵容</h3>
+            <span>团队讲师均具有业界顶级认证证书，且项目经验丰富，专职讲师均有5年以上授课经验</span>
+        </div>
+        <div id="advantage_rate" class="col-md-4 col-sm-6 col-xs-12 advantage_block " style="left:0; ">
+            <img src="__PUBLIC__/img/advantage/02.png">
+            <h3>高通过率</h3>
+            <span>综合通过率96%，业界领先水平</span>
+        </div>
+        <div id="advantage_question" class="col-md-4 col-sm-6 col-xs-12 advantage_block" style="left:0;">
+            <img src="__PUBLIC__/img/advantage/03.png">
+            <h3>最新最稳定题库资料</h3>
+            <span>稳定的题库资料，保障学员一次通过</span>
+        </div>
+        <div id="advantage_machine" class="col-md-4 col-sm-6 col-xs-12 advantage_block " style="left:0; ">
+            <img src="__PUBLIC__/img/advantage/04.png">
+            <h3>完善的实操和模拟环境</h3>
+            <span>团队模拟操作采用的设备均是企业应用设备，模拟环境和考试环境几乎完全一样</span>
+        </div>
+        <div id="advantage_course" class="col-md-4 col-sm-6 col-xs-12 advantage_block" style="left:0;">
+            <img src="__PUBLIC__/img/advantage/05.png">
+            <h3>紧凑合理的课程安排</h3>
+            <span>不拖延学生时间，充分利用周末假期时间，所有课程安排透明合理紧凑</span>
+        </div>
+        <div id="advantage_environment" class="col-md-4 col-sm-6 col-xs-12 advantage_block " style="left:0; ">
+            <img src="__PUBLIC__/img/advantage/06.png">
+            <h3>优雅的教学环境</h3>
+            <span>培训办公隔离</span>
+        </div>
+    </div>
+</div>
+<script>
+$(window).resize(function(event) {
+    /* Act on the event */
+});
+$(document).ready(function(e) {
+    // $(window).resize();
+    $(".advantage .advantage_block").each(function(e) {
+        $(this).hover(function() {
+            /* Stuff to do when the mouse enters the element */
+            $(this).css("background", "rgba(0,0,0,.1)");
+        }, function() {
+            /* Stuff to do when the mouse leaves the element */
+            $(this).css("background", "#fff");
+        });
+    });
+    var crt = 0;
+    $("#btn_close").click(function(event) {
+        /* Act on the event */
+        switch (crt) {
+            case 1:
+            case 3:
+            case 6:
+                //切换关闭按钮颜色
+                $(".glyphicon-remove-sign").toggleClass("color-white");
+                crt = 0;
+                break;
+            default:
+                break;
+        }
+    });
+    // 导师
+    $("#advantage_teacher").click(function(event) {
+        location.hash = "advantage_teacher";
+        var domStr = '<img src="{$advantage_prefix}/subpage/mentor/kudon-teather.jpg">';
+        $(".modal-body").html(domStr);
+        //切换关闭按钮颜色
+        crt = 1;
+        $(".glyphicon-remove-sign").toggleClass("color-white");
+        /* Act on the event */
+        $("#modal-trigger").click();
+    });
+    // 通过率
+    $("#advantage_rate").click(function(event) {
+        location.hash = "advantage_rate";
+        var domStr = '<img src="{$advantage_prefix}/subpage/rate/detail_passrate.jpg">';
+        $(".modal-body").html(domStr);
+        crt = 2;
+        /* Act on the event */
+        $("#modal-trigger").click();
+    });
+    // 题库
+    $("#advantage_question").click(function(event) {
+        location.hash = "advantage_question";
+        var domStr = '<img src="{$advantage_prefix}/subpage/question/kudon-tiku.jpg">';
+        domStr += '<ul class="btn_group_tiku_detail">';
+        domStr += '<li><a class="btn_tiku_detail" data-src="{$advantage_prefix}/subpage/question/kudon-tiku3.png">&nbsp;</a></li>';
+        domStr += '<li><a class="btn_tiku_detail" data-src="{$advantage_prefix}/subpage/question/kudon-tiku4.png">&nbsp;</a></li>';
+        domStr += '<li><a class="btn_tiku_detail" data-src="{$advantage_prefix}/subpage/question/kudon-tiku5.png">&nbsp;</a></li>';
+        domStr += '</ul>';
+        domStr += '<div class="tiku_detail_wrapper">';
+        domStr += '<img class="btn_close_tiku_detail" src="{$advantage_prefix}/subpage/question/kudon-tiku2.png">';
+        domStr += '<div class="content_wrapper">';
+        domStr += '<img class="img_tiku_detail" src="{$advantage_prefix}/subpage/question/kudon-tiku3.png">';
+        domStr += '</div>';
+        domStr += '</div>';
+        $(".modal-body").html(domStr);
+        $(".btn_tiku_detail").click(function() {
+            $(".img_tiku_detail").attr('src', $(this).attr("data-src"));
+            // $(".tiku_detail_wrapper").css('display', 'block');
+            $(".tiku_detail_wrapper").toggle(500);
+        });
+        $(".btn_close_tiku_detail").click(function(event) {
+            // $(".tiku_detail_wrapper").css('display', 'none');
+            $(".tiku_detail_wrapper").toggle(500);
+        });
+        //颜色切换
+        crt = 3;
+        $(".glyphicon-remove-sign").toggleClass("color-white");
+        $("#modal-trigger").click();
+    });
+    // 机房环境
+    $("#advantage_machine").click(function(event) {
+        location.hash = "advantage_machine";
+        var domStr = '';
+        domStr += '<img src="{$advantage_prefix}/subpage/machine/detail_machine01.JPG">';
+        domStr += '<img src="{$advantage_prefix}/subpage/machine/detail_machine02.JPG">';
+        $(".modal-body").html(domStr);
+        crt = 4;
+        /* Act on the event */
+        $("#modal-trigger").click();
+    });
+    // 课程
+    $("#advantage_course").click(function(event) {
+        location.hash = "advantage_course";
+        var domStr = '';
+        domStr += '<img class="kecheng_bg" src="{$advantage_prefix}/subpage/course/kudon-kecheng.jpg">';
+        // domStr += '        <div class="dropdown_group">';
+        // domStr += '            <div class="wrapper">';
+        // domStr += '                <label class="dropdown_toggle" class="dropdown_toggle">Cisco认证网络工程师 <span class="glyphicon glyphicon-chevron-left">&nbsp;</span></label>';
+        // domStr += '                <ul class="dropdown_kecheng packup">';
+        // domStr += '                    <li>网路基本概念</li>';
+        // domStr += '                    <li>交换技术原理和配置</li>';
+        // domStr += '                    <li>广域网技术原理和配置</li>';
+        // domStr += '                    <li>网络设备维护</li>';
+        // domStr += '                </ul>';
+        // domStr += '            </div>';
+        // domStr += '            <div class="wrapper">';
+        // domStr += '                <label class="dropdown_toggle">Cisco认证资深网络工程师 <span class="glyphicon glyphicon-chevron-left">&nbsp;</span></label>';
+        // domStr += '                <ul class="dropdown_kecheng packup">';
+        // domStr += '                    <li>高级路由技术（Route）</li>';
+        // domStr += '                    <li>多层交换技术（Switch）</li>';
+        // domStr += '                    <li>网络排错和维护（TShoot）</li>';
+        // domStr += '                </ul>';
+        // domStr += '            </div>';
+        // domStr += '            <div class="wrapper">';
+        // domStr += '                <label class="dropdown_toggle">Cisco认证互联网专家 <span class="glyphicon glyphicon-chevron-left">&nbsp;</span></label>';
+        // domStr += '                <ul class="dropdown_kecheng packup">';
+        // domStr += '                    <li>';
+        // domStr += '                        <label class="dropdown_toggle">CCIE-R&amp;S理论 <span class="glyphicon glyphicon-chevron-left">&nbsp;</span></label>';
+        // domStr += '                        <ul class="sub_dropdown_kecheng packup">';
+        // domStr += '                            <li>IGP</li>';
+        // domStr += '                            <li>BGP</li>';
+        // domStr += '                            <li>QOS</li>';
+        // domStr += '                            <li>组播</li>';
+        // domStr += '                            <li>IPV6</li>';
+        // domStr += '                            <li>TGP/IP技术原理</li>';
+        // domStr += '                            <li>安全和IOS Feature</li>';
+        // domStr += '                            <li>VPN知识讲解</li>';
+        // domStr += '                            <li>IDS知识讲解</li>';
+        // domStr += '                            <li>PIX知识讲解</li>';
+        // domStr += '                        </ul>';
+        // domStr += '                    </li>';
+        // domStr += '                    <li>';
+        // domStr += '                        <label class="dropdown_toggle">CCIE-R&amp;S实验 <span class="glyphicon glyphicon-chevron-left">&nbsp;</span></label>';
+        // domStr += '                        <ul class="sub_dropdown_kecheng packup">';
+        // domStr += '                            <li>RIP</li>';
+        // domStr += '                            <li>OSPF</li>';
+        // domStr += '                            <li>EIGRP</li>';
+        // domStr += '                            <li>BGP</li>';
+        // domStr += '                            <li>路由重发布</li>';
+        // domStr += '                            <li>IP访问控制列表</li>';
+        // domStr += '                            <li>基于策略的路由</li>';
+        // domStr += '                            <li>NAT</li>';
+        // domStr += '                            <li>HSRP</li>';
+        // domStr += '                            <li>CDP</li>';
+        // domStr += '                            <li>NTP</li>';
+        // domStr += '                            <li>安全</li>';
+        // domStr += '                            <li>QOS</li>';
+        // domStr += '                            <li>组播</li>';
+        // domStr += '                            <li>IP/IOS特征集</li>';
+        // domStr += '                        </ul>';
+        // domStr += '                    </li>';
+        // domStr += '                </ul>';
+        // domStr += '            </div>';
+        // domStr += '        </div>';
+        $(".modal-body").html(domStr);
+        // dropdown
+        // $(".dropdown_toggle").next().slideToggle(true);
+        // $(".dropdown_toggle").click(function() {
+        //     $(this).next().slideToggle(500);
+        //     $(this).children('span').toggleClass('glyphicon-chevron-left');
+        //     $(this).children('span').toggleClass('glyphicon-chevron-down');
+
+        // });
+        crt = 5;
+        /* Act on the event */
+        $("#modal-trigger").click();
+    });
+    // 环境
+    $("#advantage_environment").click(function(event) {
+        location.hash = "advantage_environment";
+        var domStr = '';
+        domStr += '<img src="{$advantage_prefix}/subpage/environment/environment01.jpg">';
+        domStr += '<img src="{$advantage_prefix}/subpage/environment/environment02.jpg">';
+        domStr += '<img src="{$advantage_prefix}/subpage/environment/environment03.jpg">';
+        $(".modal-body").html(domStr);
+        crt = 6;
+        $(".glyphicon-remove-sign").toggleClass("color-white");
+        /* Act on the event */
+        $("#modal-trigger").click();
+    });
+    if (window.history && window.history.pushState) {
+        $(window).on('popstate', function() {
+            $("#btn_close").click();
+        });
+    }
+});
+</script>

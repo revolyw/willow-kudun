@@ -1,0 +1,10 @@
+/.DS_Store
+
+# /*
+# !/Application/
+
+# /Application/*
+# !/Application/Home/
+.idea
+Application/Runtime/*
+index.php

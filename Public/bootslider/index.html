@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootslider - Responsive Bootstrap CSS3 Slider</title>
+
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+        <meta name="description" content="Bootslider is the ultimate premium Bootstrap Slider Plugin offering the capability to show images, videos, html markup and captions paired with modern and fancy 3D transitions. Even more important, it is fully responsive and mobile optimized and can take on any dimensions."/>
+
+        <meta name="keywords" content="bootslider, bootstrap, bootstrap slider, fullscreen, gallery, jquery, jquery slider, premium, responsive, slider, swipe, touch, twitter, videos"/>
+
+        <meta charset="UTF-8">
+
+        <!-- Bootstrap Family Styles -->
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+
+        <!-- Required Bootslider Styles -->
+        <link href="css/animate.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootslider.css" rel="stylesheet" type="text/css" />
+
+        <!-- Page Level Styles -->
+        <style>
+            body, p, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+            }
+            a:hover{
+                text-decoration: none;
+            }
+
+
+            .bs-slide{
+                height:550px;
+            }
+            @media screen and (max-width:767px){
+                .bs-slide{
+                    height:300px;
+                }
+            }
+
+
+            .heading{
+                margin: 10px 0 0 0;
+                color: #fff;
+                font-size:56px;
+                font-weight: bold;
+                text-shadow: -3px 3px 8px rgba(0,0,0,0.75);
+            }
+            @media screen and (max-width: 1279px){
+                .heading{
+                    font-size:48px;
+                }
+            }
+            @media screen and (max-width: 979px){
+                .heading{
+                    font-size:36px;
+                }
+            }
+            @media screen and (max-width: 767px){
+                .heading{
+                    font-size:28px;
+                }
+            }
+            @media screen and (max-width: 479px){
+                .heading{
+                    font-size:22px;
+                }
+            }
+
+            .subheading{
+                margin-top: 0;
+                color: #fff;
+                font-size:48px;
+                font-weight: 300;
+                text-shadow: -3px 3px 8px rgba(0,0,0,0.75);
+            }
+            @media screen and (max-width: 1279px){
+                .subheading{
+                    font-size:36px;
+                }
+            }
+            @media screen and (max-width: 979px){
+                .subheading{
+                    font-size:30px;
+                }
+            }
+            @media screen and (max-width: 767px){
+                .subheading{
+                    font-size:24px;
+                }
+            }
+            @media screen and (max-width: 479px){
+                .subheading{
+                    font-size:20px;
+                }
+            }
+
+
+
+            #parallax1{
+                background-image: url(img/parallax-slide-1.jpg); 
+            }
+            #parallax2{
+                background-image: url(img/parallax-slide-2.jpg);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="bootslider" id="bootslider">
+            <!-- Bootslider Loader -->
+            <div class="bs-loader">
+                <img src="img/loader.gif" width="31" height="31" alt="Loading.." id="loader"/>
+            </div>
+            <!-- /Bootslider Loader -->
+
+            <!-- Bootslider Container -->
+            <div class="bs-container">
+
+                <!-- Bootslider Slide -->
+                <div class="bs-slide active" data-animate-in="flipInX" data-animate-out="holeOut">
+                    <div class="bs-foreground">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 bs-vertical-center">
+                                    <div 
+                                        data-animate-in="fadeInLeft" data-animate-out="fadeOutUpBig" data-delay="1600">
+                                        <h1 class="heading">
+                                            BOOTSLIDER
+                                        </h1>
+                                        <h2 class="subheading text-white">
+                                            FREE YOUR IMAGINATION
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bs-background">
+                        <img src="img/slide-4-layer-1.png" class="bs-layer"
+                             data-animate-in="fadeInRightBig" data-animate-out="fadeOutRightBig" data-delay="400"
+                             data-width="666" data-height="649" data-right="0" data-bottom="0"/>
+                        <img src="img/a1.png" alt="" />
+                    </div>
+                </div>
+                <!-- /Bootslider Slide -->
+
+                <!-- Bootslider Slide -->
+                <div class="bs-slide" data-animate-in="bounceInUp" data-animate-out="hinge">
+                    <div class="bs-foreground">
+                        <div class="container">
+                            <div class="row" data-animate-in="fadeInLeftBig" data-delay="1000" data-animate-out="fadeOutDown">
+                                <div class="col-md-12">
+                                    <h1 class="heading">BOOTSLIDER</h1>
+                                    <p class="subheading text-white">SIMPLY LOVES BOOTSTRAP</p>
+                                    <p>
+                                        <a class="btn btn-primary" href="#">BUY NOW</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bs-background">
+                        <img src="img/a2.png" alt="" />
+                    </div>
+                </div>
+                <!-- /Bootslider Slide -->
+
+                <!-- Bootslider Slide -->
+                <div class="bs-slide" data-animate-in="bounceInDown" data-animate-out="flipOutX">
+                    <div class="bs-foreground">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <div data-animate-in="tada" data-animate-out="fadeOutUpBig" data-delay="1000">
+                                        <h1 class="heading">
+                                            BOOTSLIDER
+                                        </h1>
+                                        <h2 class="subheading text-white">
+                                            ABSOLUTELY RESPONSIVE
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bs-background">
+                        <img src="img/a3.png" alt="" />
+                    </div>
+                </div>
+                <!-- /Bootslider Slide -->
+
+                <!-- Bootslider Slide -->
+                <div class="bs-slide" data-animate-in="rollIn" data-animate-out="flipOutX">
+                    <div class="bs-foreground">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h1 class="heading"
+                                        data-animate-in="fadeInLeftBig" data-animate-out="fadeOutLeftBig" data-delay="800">
+                                        NOW LAYERED
+                                    </h1>
+                                    <h2 class="subheading text-white"
+                                        data-animate-in="fadeInLeftBig" data-animate-out="fadeOutLeftBig" data-delay="1200">
+                                        AND EVEN MORE AWESOME
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bs-background">
+                        <img src="img/a4.png" alt="" />
+                    </div>
+                </div>
+                <!-- /Bootslider Slide -->
+
+                <!-- Bootslider Slide -->
+                <div class="bs-slide" data-animate-in="scaleUpIn" data-animate-out="scaleUpOut">
+                    <div class="bs-foreground">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 bs-vertical-center">
+                                <div class="bs-video black" data-animate-in="fadeIn" data-delay="800" data-animate-out="fadeOutLeftBig"> 
+                                   
+                                    <iframe height=498 width=510 src="http://player.youku.com/embed/XMTY1MjI3NDIwMA==" frameborder=0 allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bs-background">
+                        <img src="img/a5.png" alt="" />
+                    </div>
+                </div>
+                <!-- /Bootslider Slide -->
+
+                <!-- Bootslider Slide -->
+                <div class="bs-slide" data-animate-in="openDownLeftReturn" data-animate-out="slideUp">
+                    <div class="bs-foreground">
+                        <div class="bs-video-fullscreen" data-animate-out="fadeOut">
+                            <iframe height=720 width=1440 src="http://player.youku.com/embed/XMTU3NjI5NDQ4NA==" frameborder=0 allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="bs-background">
+                        <img src="img/a6.png" alt="" />
+                    </div>
+                </div>
+                <!-- /Bootslider Slide -->
+
+            </div>
+            <!-- /Bootslider Container -->
+
+            <!-- Bootslider Progress -->
+            <div class="bs-progress progress">
+                <div class="progress-bar progress-primary"></div>
+            </div>
+            <!-- /Bootslider Progress -->
+
+            <!-- Bootslider Thumbnails -->
+            <div class="bs-thumbnails text-center text-alizarin">
+                <ul class=""></ul>
+            </div>
+            <!-- /Bootslider Thumbnails -->
+
+            <!-- Bootslider Pagination -->
+            <div class="bs-pagination text-center text-alizarin">
+                <ul class="pagination"></ul>
+            </div>
+            <!-- /Bootslider Pagination -->
+
+            <!-- Bootslider Controls -->
+            <div class="bs-controls text-center">
+                <div class="btn-group">
+                    <a href="javascript:void(0);" class="btn btn-primary bs-prev">&lt;</a>
+                    <a href="javascript:void(0);" class="btn btn-primary bs-next">&gt;</a>
+                </div>
+            </div>
+            <!-- /Bootslider Controls -->
+
+        </div>
+
+
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js" type="text/javascript"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/jquery.grozav.plugins.min.js" type="text/javascript"></script>
+        <script src="js/jquery.grozav.bootslider.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function() {
+                var slider = new bootslider('#bootslider', {
+                    animationIn: "fadeInUp",
+                    animationOut: "flipOutX",
+                    timeout: 5000,
+                    autoplay: true,
+                    preload: true,
+                    pauseOnHover: false,
+                    thumbnails: false,
+                    pagination: false,
+                    mousewheel: false,
+                    keyboard: true,
+                    touchscreen: true,
+                    layout: 'fixedheight-center',
+                    canvas: {
+                        width: 1440,
+                        height: 720
+                    }
+                });
+                slider.init();
+            });
+        </script>
+    </body>
+</html>

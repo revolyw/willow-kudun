@@ -1,0 +1,623 @@
+<style type="text/css">
+.photos {
+    color: #000;
+}
+
+.casemore_unit {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.casemore_unit .info {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fff;
+    display: none;
+}
+
+
+/* 小屏幕（平板，大于等于 768px） */
+
+@media (min-width: 768px) {
+    .casemore_unit .info p {
+        font-size: 2rem;
+    }
+}
+
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+
+@media (min-width: 992px) {
+    .casemore_unit .info p {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+
+@media (min-width: 1200px) {
+    .casemore_unit .info p {
+        font-size: .5rem;
+    }
+}
+
+.portrait {
+    display: inline!important;
+    width: 100%;
+    height: auto;
+    border: 0;
+}
+
+.img_weak {
+    -webkit-filter: brightness(.5);
+}
+
+.case_container {
+    color: #000;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.case_container img {
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+
+.border_left {
+    border-right: 1px solid #eee!important;
+}
+
+.border_right {
+    border-right: 1px solid #eee!important;
+}
+
+.case_unit {
+    position: relative;
+    text-align: center;
+    min-height: 300px;
+}
+
+.case_unit .summary {
+    min-height: 11em;
+}
+
+.case_unit .detail {
+    color: #fff!important;
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    display: none;
+}
+
+.case_unit img {
+    width: 50%;
+    height: auto;
+}
+
+.case_unit p,
+h3 {
+    width: 100%;
+    color: #000;
+}
+
+.detail p {
+    position: relative;
+    color: #fff;
+}
+
+.detail .description {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}
+
+.case_unit .description {
+    min-height: 11em;
+}
+
+.col-lg-1,
+.col-md-2,
+.col-sm-3,
+.col-xs-4,
+.col-md-1,
+.col-sm-2,
+.col-xs-3 {
+    padding: 0;
+}
+
+.text_company {
+    height: 3em;
+}
+
+.text_salary {
+    color: #FF0000;
+}
+
+*/
+</style>
+<assign name="case_prefix" value="__PUBLIC__/img/case" />
+<assign name="casemore_prefix" value="__PUBLIC__/img/case/casemore" />
+<h1 class="sub_title english_01">
+    Successful Case
+</h1>
+<div class="container-fluid">
+    <div class="row case_container">
+        <div class="case_unit col-md-3 col-sm-6 col-xs-12 border-right">
+            <!-- 宰学员 -->
+            <img src="{$case_prefix}/01.png" />
+            <div class="summary">
+                <h3 class="text_company"><b>微软（中国）南京分公司</b></h3>
+                <p><span class="glyphicon glyphicon-map-marker"></span> 香港</p>
+                <p>CCIE ISP方向</p>
+                <h4>年薪</h4>
+                <h1 class="text_salary">200,000</h1>
+            </div>
+            <div class="detail">
+                <div class="description">
+                    <p>南京邮电大学自动化专业</p>
+                    <p>参与中国联通浙江IP城域网设备扩容工程</p>
+                    <p>参与包头IP城域网一阶段设计</p>
+                    <p>参与安徽国家电网跨城MPLS-VPN网络改造割接项目</p>
+                </div>
+            </div>
+        </div>
+        <div class="case_unit col-md-3 col-sm-6 col-xs-12 border-right">
+            <!-- 吴学员 -->
+            <img src="{$case_prefix}/02.png" />
+            <div class="summary">
+                <h3 class="text_company"><b>中软国际</b></h3>
+                <p><span class="glyphicon glyphicon-map-marker"></span> 香港</p>
+                <p>CCIE ISP方向</p>
+                <h4>年薪</h4>
+                <h1 class="text_salary">140,000</h1>
+            </div>
+            <div class="detail">
+                <div class="description">
+                    <p>南京理工大学紫金学院计算机自动化专业</p>
+                    <p>参与中国南方电网前兆网络改造项目</p>
+                    <p>参与江苏广电网络割接项目</p>
+                    <p>参与盐城东风悦达起亚 企业网络的规划与部署工作</p>
+                </div>
+            </div>
+        </div>
+        <div class="case_unit col-md-3 col-sm-6 col-xs-12 border-right">
+            <!-- 孙学员 -->
+            <img src="{$case_prefix}/03.png" />
+            <div class="summary">
+                <h3 class="text_company"><b>锐捷网络有限公司</b></h3>
+                <p><span class="glyphicon glyphicon-map-marker"></span> 北京</p>
+                <p>CCIE R&S方向</p>
+                <h4>年薪</h4>
+                <h1 class="text_salary">120,000</h1>
+            </div>
+            <div class="detail">
+                <div class="description">
+                    <p>南京航空航天大学计算机科学与技术专业</p>
+                    <p>参与阿里巴巴上海数据中心的割接项目</p>
+                    <p>参与上海巨人网络核心部署工作</p>
+                    <p>参与上海民生银行电商事业部网络设备集成项目</p>
+                </div>
+            </div>
+        </div>
+        <div class="case_unit col-md-3 col-sm-6 col-xs-12 border-left">
+            <!-- 杨学员 -->
+            <img src="{$case_prefix}/04.png " />
+            <div class="summary">
+                <h3 class="text_company"><b>爱立信（中国）有限公司</b></h3>
+                <p><span class="glyphicon glyphicon-map-marker"></span> 香港</p>
+                <p>CCIE ISP方向</p>
+                <h4>年薪</h4>
+                <h1 class="text_salary">150,000</h1>
+            </div>
+            <div class="detail">
+                <div class="description">
+                    <p>毕业于南京邮电大学信息安全专业</p>
+                    <p>参与中国电信4G IPRAN项目的部署与测试</p>
+                    <p>负责上海思博教育网络实验室的搭建</p>
+                    <p>参与上海自由贸易区的网络升级项目</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(".case_unit").each(function(e) {
+        var detail = $(this).children('.detail');
+        var img = $(this);
+        var speed = 200;
+        $(this).hover(function() {
+            detail.css("display", "block");
+            detail.animate({
+                    height: "100%"
+                },
+                speed,
+                function() {});
+        }, function() {
+            detail.animate({
+                    height: "0"
+                },
+                speed,
+                function() {});
+            detail.css('display', 'none');
+        });
+    });
+    </script>
+    <div class="photos ">
+        <h3 class="sub_title">More</h3>
+        <div class="container-fluid">
+            <div class="row casemore">
+                <!-- one row -->
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/001.png ">
+                    <div class="info">
+                        <p>赵凌云</p>
+                        <p>2014.10.20</p>
+                        <p>香港</p>
+                        <p>IE号:45137</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/002.png ">
+                    <div class="info">
+                        <p>林宇聘</p>
+                        <p>2014.10.20</p>
+                        <p>悉尼</p>
+                        <p>IE号:45131</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/003.png ">
+                    <div class="info">
+                        <p>肖正亚</p>
+                        <p>2014.10.29</p>
+                        <p>香港</p>
+                        <p>IE号:45247</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/004.png ">
+                    <div class="info">
+                        <p>陆世叶</p>
+                        <p>2014.11.5</p>
+                        <p>香港</p>
+                        <p>IE号:45332</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/005.png ">
+                    <div class="info">
+                        <p>宰士明</p>
+                        <p>2014.11.10</p>
+                        <p>香港</p>
+                        <p>IE号:45387</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/006.png ">
+                    <div class="info">
+                        <p>杨文博</p>
+                        <p>2014.11.13</p>
+                        <p>香港</p>
+                        <p>IE号:45447</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/007.png ">
+                    <div class="info">
+                        <p>田家才</p>
+                        <p>2014.11.20</p>
+                        <p>香港</p>
+                        <p>IE号:45562</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/008.png ">
+                    <div class="info">
+                        <p>赵凌云</p>
+                        <p>2014.10.20</p>
+                        <p>香港</p>
+                        <p>IE号:45137</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/009.png ">
+                    <div class="info">
+                        <p>吴建超</p>
+                        <p>2014.12.6</p>
+                        <p>北京</p>
+                        <p>IE号:45787</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/010.png ">
+                    <div class="info">
+                        <p>郭子霆</p>
+                        <p>2014.12.11</p>
+                        <p>香港</p>
+                        <p>IE号:45882</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/011.png ">
+                    <div class="info">
+                        <p>王剑</p>
+                        <p>2015.1.11</p>
+                        <p>香港</p>
+                        <p>IE号:46217</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/012.png ">
+                    <div class="info">
+                        <p>蔡凡</p>
+                        <p>2016.5.10</p>
+                        <p>香港</p>
+                        <p>IE号:52692</p>
+                    </div>
+                </div>
+                <!-- tow row -->
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/013.png ">
+                    <div class="info">
+                        <p>杨雪辰</p>
+                        <p>2015.1.27</p>
+                        <p>北京</p>
+                        <p>IE号:46592</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/014.png ">
+                    <div class="info">
+                        <p>季晓倩</p>
+                        <p>2015.5.5</p>
+                        <p>北京</p>
+                        <p>IE号:48405</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/015.png ">
+                    <div class="info">
+                        <p>杨雅蓉</p>
+                        <p>2015.1.28</p>
+                        <p>北京</p>
+                        <p>IE号:46628</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/016.png ">
+                    <div class="info">
+                        <p>王文宇</p>
+                        <p>2015.2.4</p>
+                        <p>北京</p>
+                        <p>IE号:46760</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/017.png ">
+                    <div class="info">
+                        <p>张颖</p>
+                        <p>2015.2.5</p>
+                        <p>北京</p>
+                        <p>IE号:4678x</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/018.png ">
+                    <div class="info">
+                        <p>韩宇</p>
+                        <p>2015.2.6</p>
+                        <p>北京</p>
+                        <p>IE号:46800</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/019.png ">
+                    <div class="info">
+                        <p>全高宁</p>
+                        <p>2015.2.12</p>
+                        <p>北京</p>
+                        <p>IE号:46937</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/020.png ">
+                    <div class="info">
+                        <p>谷诚成</p>
+                        <p>2015.2.26</p>
+                        <p>北京</p>
+                        <p>IE号:47215</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/021.png ">
+                    <div class="info">
+                        <p>何成</p>
+                        <p>2015.3.9</p>
+                        <p>香港</p>
+                        <p>IE号:47492</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/022.png ">
+                    <div class="info">
+                        <p>钟益达</p>
+                        <p>2015.3.30</p>
+                        <p>北京</p>
+                        <p>IE号:47823</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/023.png ">
+                    <div class="info">
+                        <p>胡庆</p>
+                        <p>2015.4.14</p>
+                        <p>武汉</p>
+                        <p>IE号:48062</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/024.png ">
+                    <div class="info">
+                        <p>吴李威</p>
+                        <p>2015.4.14</p>
+                        <p>香港</p>
+                        <p>IE号:48078</p>
+                    </div>
+                </div>
+                <!-- three row -->
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/025.png ">
+                    <div class="info">
+                        <p>袁杨</p>
+                        <p>2015.4.22</p>
+                        <p>香港</p>
+                        <p>IE号:48184</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/026.png ">
+                    <div class="info">
+                        <p>高闻</p>
+                        <p>2015.6.9</p>
+                        <p>香港</p>
+                        <p>IE号:48373</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/027.png ">
+                    <div class="info">
+                        <p>姜瀚</p>
+                        <p>2016.8.19</p>
+                        <p>香港</p>
+                        <p>IE号:53801</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/028.png ">
+                    <div class="info">
+                        <p>唐晋</p>
+                        <p>2015.6.24</p>
+                        <p>香港</p>
+                        <p>IE号:48468</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/029.png ">
+                    <div class="info">
+                        <p>胡伟</p>
+                        <p>2015.8.18</p>
+                        <p>北京</p>
+                        <p>IE号:48721</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/030.png ">
+                    <div class="info">
+                        <p>谢文祥</p>
+                        <p>2015.1.23</p>
+                        <p>香港</p>
+                        <p>IE号:4651x</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/031.png ">
+                    <div class="info">
+                        <p>罗霄</p>
+                        <p>2016.5.13</p>
+                        <p>北京</p>
+                        <p>IE号:52745</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/032.png ">
+                    <div class="info">
+                        <p>沈晨宇</p>
+                        <p>2016.5.16</p>
+                        <p>北京</p>
+                        <p>IE号:52777</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/033.png ">
+                    <div class="info">
+                        <p>马双旭</p>
+                        <p>2016.5.17</p>
+                        <p>北京</p>
+                        <p>IE号:52795</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/034.png ">
+                    <div class="info">
+                        <p>马鹏辉</p>
+                        <p>2016.5.19</p>
+                        <p>北京</p>
+                        <p>IE号:52830</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/035.png ">
+                    <div class="info">
+                        <p>曹俣</p>
+                        <p>2016.5.20</p>
+                        <p>北京</p>
+                        <p>IE号:52847</p>
+                    </div>
+                </div>
+                <div class="casemore_unit col-md-1 col-sm-2 col-xs-3">
+                    <img class="portrait " src="{$casemore_prefix}/036.png ">
+                    <div class="info">
+                        <p>黄彬</p>
+                        <p>2016.5.19</p>
+                        <p>北京</p>
+                        <p>IE号:53502</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+    // $(window).resize();
+    $(".casemore_unit").each(function(e) {
+        var info = $(this).children('.info');
+        var img = $(this).children('img');
+        var speed = 100;
+        $(this).hover(function() {
+            img.css('', 'value');
+            info.animate({
+                    bottom: "0"
+                },
+                speed,
+                function() {
+                    /* stuff to do after animation is complete */
+                });
+            info.css("display", "block");
+            img.addClass("img_weak");
+        }, function() {
+            info.animate({
+                    bottom: "-100%"
+                },
+                speed,
+                function() {
+                    /* stuff to do after animation is complete */
+                });
+            info.css('display', 'none');
+            img.removeClass('img_weak');
+        });
+    });
+});
+$(window).resize(function(event) {});
+</script>

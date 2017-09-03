@@ -1,0 +1,173 @@
+<style type="text/css">
+p {
+    margin: 0;
+}
+
+.glyphicon-play {
+    padding-left: 4px;
+    border-radius: 7px;
+    color: #197FD5;
+}
+
+.glyphicon-play:hover {
+    color: #fff;
+    background: #197FD5;
+    cursor: pointer;
+}
+
+.introduction_left,
+.introduction_right {
+    min-height: 400px;
+}
+
+.introduction_left img {
+    width: 70%;
+}
+
+.introduction_right .bg {
+    position: absolute;
+    z-index: -100;
+}
+
+.pyramid_container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.img_pyramid {
+    display: none;
+}
+
+.img_pyramid_bg {
+    /* position: absolute;
+    z-index: -1;
+    max-width: 608px;*/
+    float: left;
+    width: 50%;
+    height: auto;
+}
+
+.img_pyramid_01,
+.img_pyramid_02,
+.img_pyramid_03 {
+    width: 50%;
+    height: auto;
+}
+
+.img_pyramid_right {
+    margin: 0;
+    padding-top: 20px;
+    height: 65%;
+}
+
+.img_pyramid_right li {
+    height: 30%;
+    border-bottom: 1px solid #eee;
+}
+
+.img_pyramid_right li img {}
+
+.img_pyramid_01 {
+    position: absolute;
+    right: -200%;
+}
+
+.img_pyramid_02 {
+    position: absolute;
+    right: -200%;
+}
+
+.img_pyramid_03 {
+    position: absolute;
+    right: -200%;
+}
+</style>
+<h1 class="sub_title english_01">
+    Introduction
+</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="introduction_left col-md-6 col-sm-12 center-block">
+            <img class="img-responsive" src="__PUBLIC__/img/meterial1/kudon_20.png">
+            <div class="center-block">
+                <h3 class="english_01">CCIE</h3>
+                <p class="chinese_01"><strong>CCIE简介</strong></p>
+                <p class="chinese_01">是美国Cisco公司于1993年开始推出的专家级认证考试。</p>
+                <p class="chinese_01">被全球公认为IT业最权威的认证，是全球 Internetworking领域中最顶级的认证证书</p>
+            </div>
+        </div>
+        <div class="introduction_right col-md-6 col-sm-12 center-block">
+            <img class="bg img-responsive" src="__PUBLIC__/img/meterial1/kudon_23.png">
+            <div class="center-block">
+                <h3 class="english_01">CCIE Program <span class="glyphicon glyphicon-play"></span></h3>
+                <p class="chinese_01"><strong>思科认证网络专家项目</strong></p>
+                <p class="chinese_01">为网络技术设立了一个专业标准，被业界广泛认可。</p>
+                <p class="chinese_01">拥有CCIE认证被认为是具有专业网络技术知识丰富工作经验的最好证明。</p>
+            </div>
+            <div class="pyramid_container">
+                <img class="img_pyramid img_pyramid_bg" src="__PUBLIC__/img/introduction/kudon-tubiao_bg.png" alt="金字塔">
+                <ul class="img_pyramid img_pyramid_right">
+                    <li>
+                        <img class="img_pyramid img_pyramid_01" src="__PUBLIC__/img/introduction/kudon-tubiao1.png" alt="金字塔介绍01">
+                    </li>
+                    <li>
+                        <img class="img_pyramid img_pyramid_02" src="__PUBLIC__/img/introduction/kudon-tubiao2.png" alt="金字塔介绍02">
+                    </li>
+                    <li>
+                        <img class="img_pyramid img_pyramid_03" src="__PUBLIC__/img/introduction/kudon-tubiao3.png" alt="金字塔介绍03">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".pyramid_container").css('height', $(".img_pyramid_bg").height() + 'px');
+    $(".glyphicon-play").click(function(event) {
+        if ($(this).hasClass("on")) {
+            $(".img_pyramid_01").animate({
+                    right: "-200%"
+                },
+                150,
+                function() {
+                    $(".img_pyramid_02").animate({
+                            right: "-200%"
+                        },
+                        400,
+                        function() {
+                            $(".img_pyramid_03").animate({
+                                    right: "-200%"
+                                },
+                                600,
+                                function() {
+                                    $(".img_pyramid").css("display", "none");
+                                });
+                        });
+                });
+
+
+        } else {
+            $(".img_pyramid").css("display", "block");
+            $(".img_pyramid_01").animate({
+                    right: "0"
+                },
+                800,
+                function() {});
+            $(".img_pyramid_02").animate({
+                    right: "0"
+                },
+                1500,
+                function() {});
+            $(".img_pyramid_03").animate({
+                    right: "0"
+                },
+                2000,
+                function() {});
+        }
+        $(this).toggleClass("on");
+    });
+});
+</script>
